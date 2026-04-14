@@ -84,4 +84,28 @@ public class LoginTest {
                 assertTrue(loginPage.obtenerTextoError().contains("Username and password do not match"),
                                 "El mensaje de error no es el esperado");
         }
+
+        @Test
+void loginCorrecto2() throws InterruptedException {
+
+        // Usamos el método simplificado
+        loginPage.login("standard_user", "secret_sauce");
+        Thread.sleep(2000);
+
+        String urlActual = driver.getCurrentUrl();
+                assertNotNull(urlActual);
+                assertTrue(urlActual.contains("inventory"));
+}
+
+@Test
+void loginIncorrecto2() throws InterruptedException {
+
+        loginPage.login("standard_user", "malcontrasena");
+        Thread.sleep(2000);
+
+        assertTrue(loginPage.errorVisible());
+        assertTrue(loginPage.obtenerTextoError().contains("Username and password do not match"));
+}
+
+
 }
