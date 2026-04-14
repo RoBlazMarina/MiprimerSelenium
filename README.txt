@@ -42,28 +42,28 @@ Java 22
 🧩 Parte 1 — Clase LoginPage
 Se completaron los métodos para interactuar con la página de login:
 
-Escribir usuario
+    -Escribir usuario
 
-Escribir contraseña
+    -Escribir contraseña
 
-Pulsar el botón de login
+    -Pulsar el botón de login
 
-Verificar errores
+    -Verificar errores
 
-Obtener título y URL
+    -Obtener título y URL
 
-Además, se añadió un método opcional login() para simplificar el proceso.
 
 🧪 Parte 2 — Test de login correcto
 Se completó el test verificando que:
 
-Se introduce usuario válido
+    -Se introduce usuario válido
 
-Se introduce contraseña válida
+    -Se introduce contraseña válida
 
-Se pulsa login
+    -Se pulsa login
 
-La URL contiene "inventory"
+    -La URL contiene "inventory"
+
 
 
 ❌ Parte 3 — Test de login incorrecto
