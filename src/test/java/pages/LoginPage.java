@@ -3,6 +3,8 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+    //Añadimos el siguiente @ para que el editor no marque como nulos los campos, pues el selenium evita que lo sean.
+@SuppressWarnings("null")
 public class LoginPage {
     private WebDriver driver;
 
@@ -18,19 +20,27 @@ public class LoginPage {
     }
 
     // Acciones
-    public void ingresarCredenciales(String user, String pass) {
+        //Ingreso de usuario.
+    public void ingresarUsuario(String user){
         driver.findElement(userField).clear();
         driver.findElement(userField).sendKeys(user);
+    }
+
+        //Ingreso contrasena
+    public void ingresarContrasena(String pass){
         driver.findElement(passField).clear();
         driver.findElement(passField).sendKeys(pass);
+
     }
+
 
     public void clickLogin() {
         driver.findElement(loginBtn).click();
     }
 
     public void login(String user, String pass) {
-        ingresarCredenciales(user, pass);
+        ingresarUsuario(user);
+        ingresarContrasena(pass);
         clickLogin();
     }
 
